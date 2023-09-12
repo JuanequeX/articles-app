@@ -11,13 +11,8 @@
 <% unless @article.comments.blank? %>
   <hr>
   <h2>Comments:</h2>
-
-  <% @article.comments.each do |comment|%>
-    <p><%= comment.commenter %></p>
-    <p><%= comment.body %></p>
-  <% end %>
+  <%= render @article.comments%>
 <% end %>
 
-<hr>
 <h2>Add a comment:</h2>
-<%= render partial: "shared/form_comment", article: @article%>
+<%= render partial: "comments/form", article: @article%>
