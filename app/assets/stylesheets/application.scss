@@ -2,6 +2,9 @@
   './abstracts/mixins.scss';
 
 @import
+  './utils/colors';
+
+@import
   './components/navbar';
 
 
@@ -11,4 +14,6 @@ html {
 
 body {
   margin: 0;
+  background-color: $bg-100;
+  color: $text-100;
 }

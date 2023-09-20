@@ -1,9 +1,13 @@
-<header class="navbar-container navbar">
-  <%= link_to "Articles Blog", root_path, class: "navbar__title"%>
-  <% if user_signed_in? %>
-    <%= link_to 'Log Out', destroy_user_session_path, class: "navbar__logout"%>
-  <% else %>
-    <%= link_to 'Sign In', new_user_session_path, class: "navbar__signin"%>
-    <%= link_to 'Sign Up', new_user_registration_path, class: "navbar__signout" %>
-  <% end %>
+<header class="navbar navbar-container">
+  <%= link_to "Articles Blog", root_path, class: "navbar__title" %>
+
+  <div>
+    <% if user_signed_in? %>
+      <%= link_to 'Sign In', edit_user_session_path, class: "navbar__signin"%>
+      <%= link_to 'Log Out', destroy_user_session_path, class: "navbar__logout"%>
+    <% else %>
+      <%= link_to 'Sign In', new_user_session_path, class: "navbar__signin"%>
+      <%= link_to 'Sign Up', new_user_registration_path, class: "navbar__signout" %>
+    <% end %>
+  </div>
 </header>
