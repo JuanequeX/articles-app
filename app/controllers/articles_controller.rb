@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: [:index, :show]
 
   def index
     @articles = Article.all
@@ -43,7 +43,7 @@ class ArticlesController < ApplicationController
 
     redirect_to root_path, status: :see_other
   end
-
+  
   private
 
   def article_params
