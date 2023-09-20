@@ -5,6 +5,7 @@ ruby "3.2.1"
 
 gem "bootsnap", require: false
 gem "devise", "~> 4.9"
+gem "dartsass-rails", "~> 0.5.0"
 gem "importmap-rails"
 gem "jbuilder"
 gem "pg", "~> 1.1"
@@ -21,6 +22,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "hotwire-livereload"
   gem "web-console"
 end
 

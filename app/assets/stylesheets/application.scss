@@ -1,0 +1,19 @@
+@import
+  './abstracts/mixins.scss';
+
+@import
+  './utils/colors';
+
+@import
+  './components/navbar';
+
+
+html {
+  font-size: 1rem;
+}
+
+body {
+  margin: 0;
+  background-color: $bg-100;
+  color: $text-100;
+}
